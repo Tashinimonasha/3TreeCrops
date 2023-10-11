@@ -1,0 +1,313 @@
+   <?php
+
+include '../components/connect.php';
+
+session_start();
+
+if(isset($_SESSION['user_id'])){
+   $user_id = $_SESSION['user_id'];
+}else{
+   $user_id = '';
+};
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>3TREECROPS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+     <link rel="stylesheet" href="../shop.css">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row bg-secondary py-1 px-xl-5">
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="d-inline-flex align-items-center h-100">
+                    <a class="text-body mr-3" href="">About</a>
+                    <a class="text-body mr-3" href="">Contact</a>
+                    <a class="text-body mr-3" href="">Help</a>
+                    <a class="text-body mr-3" href="">FAQs</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="http://localhost:81/pp/login.html">  <button class="dropdown-item" type="button">Sign in</button></a>
+                            <button class="dropdown-item" type="button">Sign up</button>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">EN</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">SIN</button>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="d-inline-flex align-items-center d-block d-lg-none">
+                    <a href="" class="btn px-0 ml-2">
+                        <i class="fas fa-heart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                    </a>
+                    <a href="" class="btn px-0 ml-2">
+                        <i class="fas fa-shopping-cart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+            <div class="col-lg-4">
+                <a href="../index.php" class="text-decoration-none">
+                    <span class="h1 text-uppercase text-primary navic px-2">3TREE</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">CROPS</span>
+                </a>
+            </div>
+            <div class="col-lg-4 col-6 text-left">
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for products">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-6 text-right">
+                <p class="m-0">Customer Service</p>
+                <h5 class="m-0">+94 723000823</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    
+    <!-- Navbar Start -->
+    <div class="container-fluid navic mb-30">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
+                    <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categories</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(24.8% - 20px); z-index: 999;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown dropright">
+
+                            
+                        </div>
+                       <a href="Coconut_Peat_Products.php" class="nav-item nav-link">Coconut Cultivation</a>
+                        <a href="Coconut_Ekal_Products.php" class="nav-item nav-link">Tea Cultivation</a>
+                        <a href="Coconut_Water_Products.php" class="nav-item nav-link">Rubber Cultivation</a>
+                         
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navic navbar-dark py-3 py-lg-0 px-0">
+                    
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0 ">
+                             <a href="../index.php" class="nav-item nav-link active" style="padding-left:320px;">Home</a>
+                            <a href="../shop.php" class="nav-item nav-link" style="padding-left:60px;">Shop</a>
+                            <a href="../Blog.html" class="nav-item nav-link "style="padding-left:60px;">Blog</a>
+                            
+                            <a href="../contact.php" class="nav-item nav-link"style="padding-left:60px;">Contact</a>
+                        </div>
+                              <a href="components/wishlist_cart" class="btn px-0">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                            </a>
+                                 <a href="../components/cart.php" class="btn px-0 ml-3">
+                              <i class="fas fa-shopping-cart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                              </a>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+    <!-- Breadcrumb Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="breadcrumb-item text-dark" href="#">Home</a>
+                    <a class="breadcrumb-item text-dark" href="#">Shop</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <section class="products ">
+
+   <h1 class="heading" style=" padding-left:600px;">Rubber Cultivation</h1><br><br>
+
+    
+    
+  
+   
+  <center><h6><p>	Rubber cultivation, also known as rubber farming, is the process of growing rubber trees (Hevea brasiliensis) to extract latex, which is used in the production of natural rubber. Natural rubber is a vital industrial commodity used in various products, including tires, footwear, medical equipment, and industrial machinery. Here is an overview of rubber cultivation:</p></h6></center>
+<div class="box-container">
+<ol>**1. Suitable Climate:** Rubber trees thrive in regions with specific climatic conditions. They require a tropical climate with high humidity, abundant rainfall (around 2000 to 3000 mm annually), and temperatures between 25°C to 35°C (77°F to 95°F). Rubber cultivation is primarily found in tropical countries near the equator.</ol>
+
+<ol>**2. Varieties of Rubber Trees:** There are various varieties of rubber trees, but the most commonly cultivated is Hevea brasiliensis. This species produces high-quality latex. Other varieties, such as Hevea benthamiana, are also cultivated but less widely.</ol>
+
+<ol>**3. Soil Preparation:** Well-drained, slightly acidic soils with a pH level between 6 and 6.5 are suitable for rubber cultivation. The soil should be rich in organic matter and have good water-holding capacity. Proper soil testing and nutrient management are essential.</ol>
+
+<ol>**4. Planting:** Rubber trees are usually propagated from seeds or cuttings. In commercial rubber cultivation, cuttings from mature rubber trees are commonly used. Young rubber plants are transplanted into prepared fields, typically spaced 6 meters by 7 meters apart.</ol>
+
+<ol>**5. Tapping:** The primary goal of rubber cultivation is latex production. Latex is obtained by tapping the bark of the rubber trees. Tapping involves making shallow incisions on the tree's bark, allowing latex to flow into collection cups. Tapping frequency and techniques vary depending on factors like tree age and climate.</ol>
+
+<ol>**6. Pest and Disease Management:** Rubber trees are susceptible to various pests and diseases, including white root disease, leaf blight, and scale insects. Integrated pest management (IPM) techniques are used to control pests and minimize chemical pesticide use.</ol>
+
+<ol>**7. Fertilization:** Regular fertilization is essential to maintain tree health and stimulate latex production. Fertilizers rich in nitrogen, phosphorus, and potassium are commonly used.</ol>
+
+<ol>**8. Harvesting:** Rubber trees begin to produce latex at around 6 to 7 years of age. The latex collection continues for several decades, with peak latex production occurring between 8 and 30 years of age. Proper latex harvesting practices are crucial to maximize yield and minimize tree damage.</ol>
+
+<ol>**9. Processing:** After collection, latex is processed to produce various rubber products. The latex is treated to coagulate the rubber particles, which are then processed through rolling mills and vulcanized to create rubber sheets or other forms.</ol>
+
+<ol>**10. Sustainability:** Sustainable rubber cultivation practices are gaining importance due to concerns about deforestation and environmental impact. Sustainable rubber farming aims to minimize the negative ecological effects by preserving natural habitats, reducing chemical use, and promoting fair labor practices.</ol>
+</div>
+
+<center><h6><p>Rubber cultivation is a long-term investment, as rubber trees can continue to produce latex for up to 30 years or more. It is a significant industry in countries like Thailand, Indonesia, Malaysia, Vietnam, and India. The rubber industry plays a vital role in the global economy by supplying essential raw materials for various industries, particularly the automotive and manufacturing sectors.</p></h6></center>
+ 
+    
+ 
+
+</section>
+
+
+
+
+    <!-- Shop Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <!-- Shop Sidebar Start -->
+            <div class="col-lg-3 col-md-4">
+                
+        </div>
+    </div>
+    <!-- Shop End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid navic text-secondary mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4">Get In Touch</h5>
+                <p class="mb-4 text-uppercase">It’s Time To Go 3TREECROPS</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i> No:132,Sea line,Galle</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>3treecrops@gmail.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+94 723000823</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Quick Shop</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>    Home</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>    Shop</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>    Blog</a>
+                           
+                            <a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>        Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">My Account</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sign in</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sign up</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Receive 3TreeCrops Newsletter</h5>
+                        
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Your Email Address">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h6 class="text-secondary text-uppercase mt-4 mb-30">Follow Us</h6>
+                        <div class="d-flex" >
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy; <a class="text-primary" href="#">NIBM</a>. All Rights Reserved
+                    
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
