@@ -10,7 +10,7 @@ include 'components/connect.php';
 //    header('location:admin_login.php');
 // };
 
-
+//done by tashini
 
 if(isset($_POST['add'])){
 
