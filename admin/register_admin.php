@@ -10,7 +10,8 @@ session_start();
 //    header('location:admin_login.php');
 // }
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
 
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
@@ -22,12 +23,18 @@ if(isset($_POST['submit'])){
    $select_admin = $conn->prepare("SELECT * FROM `admins` WHERE name = ?");
    $select_admin->execute([$name]);
 
-   if($select_admin->rowCount() > 0){
+   if($select_admin->rowCount() > 0)
+   {
       $message[] = 'username already exist!';
-   }else{
-      if($pass != $cpass){
+   }
+   else
+   {
+      if($pass != $cpass)
+      {
          $message[] = 'confirm password not matched!';
-      }else{
+      }
+      else
+      {
          $insert_admin = $conn->prepare("INSERT INTO `admins`(name, password) VALUES(?,?)");
          $insert_admin->execute([$name, $cpass]);
          $message[] = 'new admin registered successfully!';
@@ -51,7 +58,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="../css/admin1.css">
 
 </head>
-<body style=" background-color: black;">
+<body style=" background-color: green;">
 
 <?php include '../components/admin_header.php'; ?>
 

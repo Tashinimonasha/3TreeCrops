@@ -161,7 +161,7 @@ if(isset($_SESSION['user_id'])){
     <!-- Navbar End -->
          <section class="products">
 
-   <h1 class="heading" style=" padding-left:600px;">Coconut Products</h1>
+  <br><br> <h1 class="heading" style=" padding-left:600px;">Coconut Products</h1>
 
    <div class="box-container">
 

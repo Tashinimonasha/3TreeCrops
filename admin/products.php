@@ -88,7 +88,7 @@ if(isset($_GET['delete'])){
     <link rel="stylesheet" type="text/css" href="../css/admin1.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
-<body style=" background-color: black;">
+<body style=" background-color: green;">
 
 
 

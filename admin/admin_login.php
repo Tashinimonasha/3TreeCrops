@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="../css/admin1.css">
 
 </head>
-<body style= " background-image: url('2.jpg'); background-size: cover;">
+<body style= " background-color: green; background-size: cover;">
 
 <?php
    if(isset($message)){

@@ -8,8 +8,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
-};
-include 'components/add_cart.php';
+}; 
 
 ?>
 
@@ -157,7 +156,7 @@ include 'components/add_cart.php';
     <!-- Navbar End -->
              <section class="products">
 
-   <h1 class="heading" style=" padding-left:600px;">latest products</h1>
+ <br><br>  <h1 class="heading" style=" padding-left:600px;">Rubber Products</h1>
 
    <div class="box-container">
 

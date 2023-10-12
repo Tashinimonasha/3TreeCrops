@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="../css/admin1.css">
 
 </head>
-<body style=" background-color: black;">
+<body style=" background-color: green;">
 
 <?php include '../components/admin_header.php'; ?>
 

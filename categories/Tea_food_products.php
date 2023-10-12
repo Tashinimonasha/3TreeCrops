@@ -265,7 +265,7 @@ if(isset($_SESSION['user_id'])){
                         </div>
                     </div>
                     <div class="col-md-4 mb-5">
-                        <h5 class="text-secondary text-uppercase mb-4">Receive CocoMe Newsletter</h5>
+                        <h5 class="text-secondary text-uppercase mb-4">Receive 3TreeCrops Newsletter</h5>
                         
                         <form action="">
                             <div class="input-group">

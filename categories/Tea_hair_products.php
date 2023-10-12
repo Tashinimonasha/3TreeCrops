@@ -190,7 +190,7 @@ if(isset($_SESSION['user_id'])){
 
    <?php
    $cat="p";
-     $select_products = $conn->prepare("SELECT * FROM `listing` WHERE categories='p'"); 
+     $select_products = $conn->prepare("SELECT * FROM `listing` WHERE categories='h'"); 
      $select_products->execute();
      if($select_products->rowCount() > 0){
       while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){

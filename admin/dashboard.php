@@ -22,7 +22,7 @@ $admin_id = $_SESSION['admin_id'];
    <link rel="stylesheet" href="../css/admin1.css">
 
 </head>
-<body style=" background-image: url('ccc.jpg'); background-size: cover;">
+<body style=" background-color: green; background-size: cover;">
 
 <?php include '../components/admin_header.php'; ?>
 
