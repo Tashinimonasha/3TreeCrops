@@ -4,7 +4,8 @@ if(isset($_POST["btnlogin"])){
 $con=mysqli_connect("localhost","tashini","123");
 mysqli_select_db($con ,"3crops");
 
- 
+
+
 $email=$_POST["email"];
 $pass=$_POST["pass"];
 $type=$_POST["type"];
@@ -20,7 +21,8 @@ $num_row=mysqli_num_rows($result);
 if($num_row>=1)
 {   if($type=="buyer"){
       header("location:shop.php");
-    $_SESSION['email']=$email;
+     $_SESSION['email']= $email;
+    // $_SESSION['user_id']=$user_id;
 }
 elseif ($type=="seller") {
     // code...
@@ -238,7 +240,7 @@ else{
                         <a href="#" class="forgot-pass">Forgot password?</a>
                     </div>
                     <div class="field input-field">
-                     <input type="submit" name="btnlogin" value="Login" class="btnn">
+                     <input type="submit" name="btnlogin" value="Login" class="btnn" onsubmit="session_start()">
                     </div>
                 </form>
                 <div class="form-link">

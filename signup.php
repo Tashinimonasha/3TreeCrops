@@ -20,6 +20,7 @@ require 'PHPMailer/PHPMailer/src/SMTP.php';
 
 // if(isset($_SESSION['user_id'])){
 //    $user_id = $_SESSION['user_id'];
+//    echo "<script type='text/javascript'>alert('$user_id');</script>";
 // }else{
 //    $user_id = '';
  
