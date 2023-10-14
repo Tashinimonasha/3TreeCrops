@@ -10,6 +10,8 @@ $email=$_POST["email"];
 $pass=$_POST["pass"];
 $type=$_POST["type"];
 
+//tashiniiii
+
 
 $sql="SELECT email,password,type FROM user WHERE email='$email' AND password='$pass'AND type='$type' ";
 
