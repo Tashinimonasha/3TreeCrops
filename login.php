@@ -20,8 +20,9 @@ $num_row=mysqli_num_rows($result);
 
 if($num_row>=1)
 {   if($type=="buyer"){
+    $_SESSION['email']= $email;
       header("location:shop.php");
-     $_SESSION['email']= $email;
+    
     // $_SESSION['user_id']=$user_id;
 }
 elseif ($type=="seller") {

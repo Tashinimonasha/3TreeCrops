@@ -1,7 +1,7 @@
 <?php
-
+session_start();
 if(isset($_POST['add_to_cart'])){
-
+    $_SESSION['email']=$user_id ;
    if($user_id == ''){
       header('location:cart.php');
    }else{
