@@ -27,7 +27,7 @@ if(isset($_POST['add_to_cart'])){
          $insert_cart->execute([$user_id, $pid, $name, $price, $qty, $image]);
          $message[] = 'added to cart!';
          
-      }
+    //}
 
    }
 
