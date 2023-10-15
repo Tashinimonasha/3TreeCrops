@@ -149,7 +149,7 @@ include 'components/add_cart.php';
                         </div>
 
                         
-                        <div style="margin-left: 190px; margin-top:;">
+                        <div style="margin-left: 190px;">
                                  <a href="components/wishlist_cart" class="btn px-0">
                                 <i class="fas fa-heart text-primary"></i>
                                 <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
@@ -195,7 +195,7 @@ include 'components/add_cart.php';
      if($select_products->rowCount() > 0){
       while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
    ?>
-   <form action="" method="post" class="box">
+   <form action="cart.php" method="post" class="box">
       <input type="hidden" name="pid" value="<?= $fetch_product['id']; ?>">
       <input type="hidden" name="name" value="<?= $fetch_product['name']; ?>">
       <input type="hidden" name="price" value="<?= $fetch_product['price']; ?>">
